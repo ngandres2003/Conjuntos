@@ -3,6 +3,8 @@ from tkinter import simpledialog
 from tkinter import messagebox
 from ventanaOperaciones import Operaciones
 
+'''Controla todas las operaciones y eventos de la primera ventana'''
+
 class Conjuntos:
     universo = {}
     subConjuntos = []
@@ -56,19 +58,16 @@ class Conjuntos:
         
     
     def crearAutomatico(self):
-        Conjuntos.universo = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20}
+        Conjuntos.universo = {"henry","gustavo","luis","mario","gabriel","jesus","natassja","andres"}
         Conjuntos.subConjuntos = [
-            {1,3,5,7,9},
-            {2,4,6,8,10},
-            {3,6,9,12},
-            {4,8,12,16,20},
-            {5,10,15,20},
-            {2,5,8,1,3,19,20}
+            {"henry","luis","victor","gustavo"},
+            {"henry","gustavo","mario","luis","victor","natassja","andres"},
+            {"andres","gabriel","luis"},  
         ]
         
-        messagebox.showinfo("Alert","Conjuntos creado automaticamente. \nUniverso: 1-20")
+        messagebox.showinfo("Alert","Conjuntos creado automaticamente, universal: " + str(self.universo))
         self.boton1.config(state=DISABLED)
-        self.boton2.config(state=DISABLED)
+        #self.boton2.config(state=DISABLED)
         self.boton3.config(state=DISABLED)
     
     def operaciones(self):
